@@ -21,7 +21,7 @@ function App() {
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_KEY}&units=metric`
         );
-        console.log(response);
+
         setCity('');
         setCity(response.data);
       } catch (err) {
@@ -29,6 +29,7 @@ function App() {
       }
     }
     getAPI();
+    console.clear();
   }, [search]);
 
   return (
